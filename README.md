@@ -1,5 +1,5 @@
 # info_php_26
 
 
-git flow 22
+git flow
  - criacao da branch dev

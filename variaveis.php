@@ -1,7 +1,7 @@
 <?php
 
 // Mock/Chumbar/fixar = ler dados usuario
-$nome = "Ariel";
+$nome = "Guilherme";
 
 /** Ler os dados de usuario, sendo eles:
  * nome
@@ -12,8 +12,8 @@ $nome = "Ariel";
  * E escrever a frase: O Usuario de NOME, IDADE, SEXO é filho(a) de:
  * Nome pai e nome mae
 */
-$nome = "Ariel";
-$idade = "30";
+$nome = "Guilherme";
+$idade = "29";
 $sexo = "Masculino";
 $nomeMae = "Fulana"; // camel case
 $nome_mae = "Fulana"; // sanke case
