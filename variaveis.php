@@ -130,3 +130,63 @@ if ($numero % 2 == 0) {
 } else {
     echo "O numero $numero é impar. <br>";
 }
+$numero = 6;
+$divisor = 2;
+
+$resultado = $numero / $divisor; // 3 quociente
+$resto = $numero % $divisor; // 0 resto
+
+$ehPar = resto == 0; // true; 
+if ($ehPar == false)
+
+if ($ehPar == true) {
+    echo "O numero $numero é par. <br>";
+} else {
+    echo "O numero $numero é impar. <br>";
+
+
+/**
+ * Aprovacao ou reprovacao do aluno
+ */
+$nota1 = 6;
+$nota2 = 8;
+$nota3 = 3;
+
+$media =($nota1 + $nota2 + $nota3) / 3;
+
+$mediaArredondada = round($media, 2);
+
+if ($mediaArredondada >= 7) {
+    echo "O Aluno foi aprovado com a média $mediaArredondada . <br>";
+} else {
+    echo "O Aluno foi reprovado com a média $mediaArredondada . <br>";
+}
+
+/**
+ * Nota do aluno média harmonica
+ */
+
+
+
+
+$mediaArredondada = round($media, 2);
+
+if ($mediaArredondada >= 7) {
+    echo "O Aluno foi aprovado com a média $mediaArredondada . <br>";
+} else {
+    echo "O Aluno foi reprovado com a média $mediaArredondada . <br>";
+}
+/**
+ * Nota do aluno média ponderada
+ */
+
+
+
+
+$mediaArredondada = round($media, 2);
+
+if ($mediaArredondada >= 7) {
+    echo "O Aluno foi aprovado com a média $mediaArredondada . <br>";
+} else {
+    echo "O Aluno foi reprovado com a média $mediaArredondada . <br>";
+}
