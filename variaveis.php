@@ -57,3 +57,76 @@ $valor = 10;
 $valor2 = 10;
 $resultado = $valor / $valor2;
 echo "A divisao dos valores $valor / $valor2 é: $resultado <br>";
+
+echo "<br><br>";
+/**
+ * Fazer a tabuada do 4, 5 mas com variavel, ou seja, o usuario informa um numero
+ * e esse numero será usado para a tabuada.
+ * Resultado esperado:
+ *  4 X 1 = 4
+ *  4 X 2 = 8
+ *  4 X 3 = 12
+ *  ...
+ *  4 X 10 = 40
+ */
+$numero = 4;
+
+echo "$numero x 1 = " . $numero * 1 . "<br>";
+echo "$numero x 2 = " . $numero * 2 . "<br>";
+echo "$numero x 3 = " . $numero * 3 . "<br>";
+echo "$numero x 4 = " . $numero * 4 . "<br>";
+echo "$numero x 5 = " . $numero * 5 . "<br>";
+echo "$numero x 6 = " . $numero * 6 . "<br>";
+echo "$numero x 7 = " . $numero * 7 . "<br>";
+echo "$numero x 8 = " . $numero * 8 . "<br>";
+echo "$numero x 9 = " . $numero * 9 . "<br>";
+echo "$numero x 10 = " . $numero * 10 . "<br>";
+echo "<br><br>";
+
+$numero = 5;
+
+echo "$numero x 1 = " . $numero * 1 . "<br>";
+echo "$numero x 2 = " . $numero * 2 . "<br>";
+echo "$numero x 3 = " . $numero * 3 . "<br>";
+echo "$numero x 4 = " . $numero * 4 . "<br>";
+echo "$numero x 5 = " . $numero * 5 . "<br>";
+echo "$numero x 6 = " . $numero * 6 . "<br>";
+echo "$numero x 7 = " . $numero * 7 . "<br>";
+echo "$numero x 8 = " . $numero * 8 . "<br>";
+echo "$numero x 9 = " . $numero * 9 . "<br>";
+echo "$numero x 10 = " . $numero * 10 . "<br>";
+
+echo "<br><br>";
+
+/**
+ * Calcule area de um quadrado
+ */
+$lado1 = 10;
+$lado2 = 10;
+$area = $lado1 * $lado2;
+$area = $lado1 ** 2; //potenciacao
+$area = pow($lado1, 2); // potenciacao
+
+echo "A area do quadrado é: $area <br>";
+
+/**
+ * Calcule a area de um triangulo equilatero
+ */
+$base = 10;
+$altura = 10;
+$area = ($base * $altura) /2;
+echo " A area do triangulo equilatero é: $area <br>";
+
+// operador modulo %
+
+/**
+ * Ler um numero informado pelo usuario e exibir se o numero e impar ou par.
+ * Dica: operador modulo % e IF ELSE
+ */
+$numero = 7;
+
+if ($numero % 2 == 0) {
+    echo "O numero $numero é par. <br>";
+} else {
+    echo "O numero $numero é impar. <br>";
+}
