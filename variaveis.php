@@ -181,8 +181,6 @@ if ($mediaArredondada >= 7) {
  */
 
 
-
-
 $mediaArredondada = round($media, 2);
 
 if ($mediaArredondada >= 7) {
@@ -190,3 +188,6 @@ if ($mediaArredondada >= 7) {
 } else {
     echo "O Aluno foi reprovado com a média $mediaArredondada . <br>";
 }
+
+
+
