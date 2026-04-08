@@ -151,7 +151,7 @@ if ($ehPar == true) {
  */
 $nota1 = 6;
 $nota2 = 8;
-$nota3 = 3;
+$nota3 = 9;
 
 $media =($nota1 + $nota2 + $nota3) / 3;
 
@@ -211,7 +211,10 @@ while ($contador <= 10);
 
 echo "<br>";
 
-
 //LOOPS - FOREACH
 echo "foreach <br>";
+
+//Listar os 10 primeiros numeros pares com LOOP - Escolher FOR, WHILE OU DO-WHILE
+// 2, 4, 6, 8, 10, 12, 14, 16, 18, 20
+echo "<br>10 primeiros numeros pares <br>";
 
