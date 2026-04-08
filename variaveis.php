@@ -136,13 +136,14 @@ $divisor = 2;
 $resultado = $numero / $divisor; // 3 quociente
 $resto = $numero % $divisor; // 0 resto
 
-$ehPar = resto == 0; // true; 
+$ehPar = $resto == 0; // true; 
 if ($ehPar == false)
 
 if ($ehPar == true) {
     echo "O numero $numero é par. <br>";
 } else {
     echo "O numero $numero é impar. <br>";
+}
 
 
 /**
@@ -162,32 +163,55 @@ if ($mediaArredondada >= 7) {
     echo "O Aluno foi reprovado com a média $mediaArredondada . <br>";
 }
 
-/**
- * Nota do aluno média harmonica
- */
+echo "<br>";
 
+//LOOPS
+echo "for <br>";
 
+$numero = 1;
 
-
-$mediaArredondada = round($media, 2);
-
-if ($mediaArredondada >= 7) {
-    echo "O Aluno foi aprovado com a média $mediaArredondada . <br>";
-} else {
-    echo "O Aluno foi reprovado com a média $mediaArredondada . <br>";
+for($numero = 1; $numero <= 10; $numero++) {
+    for($contador = 0; $contador < 10; $contador++) {
+    echo "$numero x $contador = " . $numero * $contador . "<br>";
 }
-/**
- * Nota do aluno média ponderada
- */
-
-
-$mediaArredondada = round($media, 2);
-
-if ($mediaArredondada >= 7) {
-    echo "O Aluno foi aprovado com a média $mediaArredondada . <br>";
-} else {
-    echo "O Aluno foi reprovado com a média $mediaArredondada . <br>";
+ echo "<br>";
 }
 
+//LOOPS - WHILE
+echo "while <br>"; 
 
+$numero = 1;
+$contador = 0;
+
+while ($contador <= 10) {
+    echo "$numero x $contador = " . $numero * $contador . "<br>";
+    $contador++;
+    
+    if ($contador == 11) {
+        $numero++;
+        $contador = 0;
+        echo "<br>";
+    }
+
+    if ($numero == 11) {
+        break;
+    }
+}
+
+//LOOPS - DO-WHILE
+echo "do-while <br>";
+$numero = 1;
+$contador = 0;
+
+do {
+    echo "$numero x $contador = " . $numero * $contador . "<br>";
+    $contador++;
+}
+while ($contador <= 10);
+
+echo "<br>";
+
+
+//LOOPS - FOREACH
+echo "foreach <br>";
 
