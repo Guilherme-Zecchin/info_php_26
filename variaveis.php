@@ -147,20 +147,65 @@ if ($ehPar == true) {
 
 
 /**
- * Aprovacao ou reprovacao do aluno
+ * Nota do aluno média aritmetica
  */
-$nota1 = 6;
-$nota2 = 8;
-$nota3 = 9;
+$nota1 = 3;
+$nota2 = 3;
+$nota3 = 4;
 
-$media =($nota1 + $nota2 + $nota3) / 3;
+$media = ($nota1 + $nota2 + $nota3) / 3;
 
 $mediaArredondada = round($media, 2);
 
 if ($mediaArredondada >= 7) {
-    echo "O Aluno foi aprovado com a média $mediaArredondada . <br>";
+    echo "O Aluno foi aprovado com a média(aritmetica) $mediaArredondada <br>";
 } else {
-    echo "O Aluno foi reprovado com a média $mediaArredondada . <br>";
+     echo "O Aluno foi reprovado com a média(aritmetica) $mediaArredondada <br>";
+}
+
+/**
+ *   Nota do aluno média harmonica
+ */
+
+$nota1 = 15;
+$nota2 = 10;
+$nota3 = 6;
+
+$mediaHarmonica= 3 / ( ( 1/ $nota1) + ( 1/ $nota2) +  ( 1/ $nota3));
+
+$mediaArredondada = round($mediaHarmonica, 2);
+
+if ($mediaArredondada >= 7) {
+    echo "O Aluno foi aprovado com a média(harmonica) $mediaArredondada <br>";
+} else {
+     echo "O Aluno foi reprovado com a média(harmonica) $mediaArredondada <br>";
+}
+
+/**
+ *   Nota do aluno média ponderada
+ */
+
+$nota1 = 1100;
+$nota2 = 2000;
+$nota3 = 5500;
+$nota4 = 12500;
+
+$peso1 = 5;
+$peso2 = 16;
+$peso3 = 3;
+$peso4 = 1;
+
+$numerador = ($nota1 * $peso1) + ($nota2 * $peso2) + ($nota3 * $peso3) + ($nota4 * $peso4);
+$denominador = $peso1 + $peso2 + $peso3 + $peso4;
+
+$mediaPonderada = $numerador / $denominador;
+
+$mediaArredondada = round($mediaPonderada, 2);
+
+if ($mediaArredondada >= 7) {
+    echo "O Aluno foi aprovado com a média(ponderada) $mediaArredondada <br>";
+} else {
+     echo "O Aluno foi reprovado com a média(ponderada) $mediaArredondada <br>";
 }
 
 echo "<br>";
@@ -218,3 +263,18 @@ echo "foreach <br>";
 // 2, 4, 6, 8, 10, 12, 14, 16, 18, 20
 echo "<br>10 primeiros numeros pares <br>";
 
+$contador = 0;
+
+for($numero = 1; $contador < 10; $numero++) {
+    $divisor = 2;
+
+    $resultado = $numero / $divisor; // 3 quociente
+    $resto = $numero % $divisor; // 1 resto
+
+    $ehPar =  $resto == 0; // true || false
+
+    if ($ehPar) {
+        echo "O numero $numero é par. <br>";
+        $contador++;
+    }
+}
