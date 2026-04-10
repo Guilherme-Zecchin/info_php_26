@@ -300,3 +300,4 @@ for($numero = 1; $contador < 20; $numero++) {
         $contador++;
     }
 }
+echo "<br>";
