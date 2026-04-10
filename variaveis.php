@@ -69,7 +69,7 @@ echo "<br><br>";
  *  ...
  *  4 X 10 = 40
  */
-$numero = 4;
+$numero = 7;
 
 echo "$numero x 1 = " . $numero * 1 . "<br>";
 echo "$numero x 2 = " . $numero * 2 . "<br>";
@@ -275,6 +275,28 @@ for($numero = 1; $contador < 10; $numero++) {
 
     if ($ehPar) {
         echo "O numero $numero é par. <br>";
+        $contador++;
+    }
+}
+
+echo "<br>";
+
+//Listar os 10 primeiros numeros pares com LOOP - Escolher FOR, WHILE OU DO-WHILE
+// 1, 3, 5, 7, 9, 11, 13, 15 ,17, 19
+echo "<br>10 primeiros numeros impares <br>";
+
+$contador = 1;
+
+for($numero = 1; $contador < 20; $numero++) {
+    $divisor = 2;
+
+    $resultado = $numero / $divisor; // 3 quociente
+    $resto = $numero % $divisor; // 1 resto
+
+    $ehPar =  $resto == 1; // true || false
+
+    if ($ehPar) {
+        echo "O numero $numero é impar. <br>";
         $contador++;
     }
 }
