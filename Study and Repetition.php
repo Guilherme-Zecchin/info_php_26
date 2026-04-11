@@ -41,3 +41,32 @@ if ($mediaArredondada >= 7){;
 }
 
 echo "<br>";
+
+//Estudos de LOOPs
+//FOR 
+//Loops com uma tabuada
+echo "for - uma tabuada <br>";
+
+$numero = 1;
+$contador = 10;
+
+for($numero = 1; $numero <= 10; $numero++) {
+    echo "$numero x $contador = " . $numero * $contador . " <br>";
+}
+
+echo "<br>";
+
+//Loops com mais de uma tabuada
+echo "for - duas ou mais tabuadas <br>";
+
+for($numero = 1; $numero <= 5; $numero++) {
+    for($contador = 1; $contador <= 10; $contador++) {
+    echo "$numero x $contador = " . $numero * $contador . " <br>";
+    }
+ echo "<br>";
+}
+
+echo "<br>";
+
+//Estudos de LOOPS - WHILE
+
