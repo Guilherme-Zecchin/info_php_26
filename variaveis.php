@@ -339,7 +339,7 @@ echo "<br>";
  */
 
 $valor1 = 10;
-$operador = "/";
+$operador = "*";
 $valor2 = 5;
 
 if ($operador == "+"){
@@ -350,7 +350,7 @@ if ($operador == "+"){
     echo $resultado = $valor1 * $valor2;
 } elseif ($operador == "/") {
     echo $resultado = $valor1 / $valor2;
-}
+} else echo "Operação Invalida"; 
 
 echo "<br>";
 
