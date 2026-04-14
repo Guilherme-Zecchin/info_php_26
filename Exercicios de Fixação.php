@@ -14,3 +14,6 @@ if ($valor > 0) {
     $resultado = "Igual a Zero";
 }
     echo $resultado ;
+
+//Crie um algoritmo que solicite a entrada e um numero e exiba a tabuada de 0 a 10 de acordo com o número solicitado
+
