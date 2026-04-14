@@ -49,3 +49,16 @@ echo "<br>";
 //1) Necessário ter as 3 váriaveis para a variavel $numero não perder seu valor;
 //2) Operação (i = x; $i > 0; $i--) - Significa que, a variavel é x e enquanto ela for menor que 0, continuar diminuindo o valor até chegar a zero;
 //3) Entender qual seria a função da variavel $valor, ver se entra na observação 1;
+
+/**
+ * Simular o funcionamento de uma calculadora com as duas estruturas lógicas:
+ * Switch Case e IF ELSE IF ELSE. Não é necessário o ZERAR, somente o calculo.
+ * Operadores: + - * /
+ *
+ * Dica: utilizar 4 variáveis, uma delas vai ser $operador a outra $resultado.
+ */
+
+$valor1 = 10;
+$operador = "+";
+$valor2 = 10;
+

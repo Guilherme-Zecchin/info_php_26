@@ -311,6 +311,15 @@ echo "<br>";
  * Saída esperada: O IMC é: 123
  */
 
+$peso = 80;
+$altura = 1.75;
+
+$resultado = $peso / ($altura * $altura);
+
+echo "O IMC é: $resultado <br>";
+
+echo "<br>";
+
 /**
  * Calcular quantos segundos tem em 2 horas e 30 minutos e exibir o valor.
  *
@@ -318,6 +327,8 @@ echo "<br>";
  *
  * Saída esperada: O Total em segundos é: 9000.
  */
+
+
 
 /**
  * Simular o funcionamento de uma calculadora com as duas estruturas lógicas:
@@ -327,13 +338,31 @@ echo "<br>";
  * Dica: utilizar 4 variáveis, uma delas vai ser $operador a outra $resultado.
  */
 
+$valor1 = 10;
+$operador = "/";
+$valor2 = 5;
+
+if ($operador == "+"){
+    echo $resultado = $valor1 + $valor2;
+} elseif ($operador == "-") {
+    echo $resultado = $valor1 - $valor2;
+} elseif ($operador == "*") {
+    echo $resultado = $valor1 * $valor2;
+} elseif ($operador == "/") {
+    echo $resultado = $valor1 / $valor2;
+}
+
+echo "<br>";
+
 /**
- * Exibir os numeros em ordem DECRESCENTE(Maior para Menor - DESC) de 10 - 0.
+ * Exibir os numeros em ordem DECRESCENTE (Maior para Menor - DESC) de 10 -
  *
  * Dica: utilizar laçoes de repetição(loops) FOR e WHILE
  *
  * Saída esperada: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0.
  */
+
+
 
 /**
  * Calcular o fatorial de um numero qualquer.
@@ -365,5 +394,23 @@ echo "<br>";
  *
  * Dica: Utilizar calculo dos pares, sendo que o unico primo par é o 2.
  *
- * Saída esperada: Os 5 primeiros Primos são: 3, 5, 7, 11, 13
+ * Saída esperada: Os 6 primeiros Primos são: 2, 3, 5, 7, 11, 13
  */
+
+$contador = 0;
+
+for($numero = 1; $contador < 10; $numero++) {
+    $divisor = 2;
+
+    $resultado = $numero / $divisor; // 3 quociente
+    $resto = $numero % $divisor; // 1 resto
+
+    $ehPar =  $resto == 0; // true || false
+
+    if ($ehPar) {
+        echo "O numero $numero é par. <br>";
+        $contador++;
+    }
+}
+
+echo "<br>";
