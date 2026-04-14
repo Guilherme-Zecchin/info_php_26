@@ -15,5 +15,12 @@ if ($valor > 0) {
 }
     echo $resultado ;
 
+ echo "<br>";
+
 //Crie um algoritmo que solicite a entrada e um numero e exiba a tabuada de 0 a 10 de acordo com o número solicitado
 
+$numero = 7;
+
+for($contador = 0; $contador <= 10; $contador++){
+    echo " $numero x $contador = " . $numero * $contador . "<br>";
+}
