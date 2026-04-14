@@ -18,6 +18,7 @@ if ($valor > 0) {
  echo "<br>";
 
 //2. Crie um algoritmo que solicite a entrada e um numero e exiba a tabuada de 0 a 10 de acordo com o número solicitado
+echo "<br>";
 
 $numero = 7;
 
@@ -26,4 +27,6 @@ for($contador = 0; $contador <= 10; $contador++){
 }
 
 //3. Crie um algoritmo que solicite um número ee faça o cálculo fatorial do mesmo, exiba o resultado na tela. Ex: Entrada = 3 Processamento: (3 * 2) *1 Saída: 6
+
+echo "<br>";
 
