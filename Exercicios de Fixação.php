@@ -62,3 +62,4 @@ $valor1 = 10;
 $operador = "+";
 $valor2 = 10;
 
+$numero = 21;
