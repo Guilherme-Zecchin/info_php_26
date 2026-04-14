@@ -68,5 +68,36 @@ for($numero = 1; $numero <= 5; $numero++) {
 
 echo "<br>";
 
-//Estudos de LOOPS - WHILE
+//Estudos de LOOPS - WHILE - Necessário sempre as duas variáveis $var1 e $var2
+//Loops While - com uma tabuada
+echo "Loops While - uma tabuada <br>";
+
+$numero = 4;
+$contador = 1;
+
+while ($contador <= 10) {
+    echo "$numero x $contador = " . $numero * $contador . "<br>";
+    $contador++;
+}
+    echo "<br>";
+
+echo "Loops While  - duas ou mais tabuadas <br>";
+
+$numero = 1;
+$contador = 1;
+
+while ($contador <= 10) {
+    echo "$numero x $contador = " . $numero * $contador . "<br>";
+    $contador++;
+    
+    if ($contador == 11) {
+        $numero++;
+        $contador = 1;
+        echo "<br>";
+    }
+
+    if ($numero == 11) {
+        break;
+    }
+}
 
