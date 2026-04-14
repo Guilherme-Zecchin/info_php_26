@@ -394,7 +394,7 @@ echo "<br>";
  *
  * Dica: Utilizar calculo dos pares, sendo que o unico primo par é o 2.
  *
- * Saída esperada: Os 6 primeiros Primos são: 2, 3, 5, 7, 11, 13
+ * Saída esperada: Os 5 primeiros Primos são: 3, 5, 7, 11, 13
  */
 
 $contador = 0;
