@@ -41,7 +41,7 @@ if ($numero > 0) {
         $valor = $valor * $i;
     }
 }
-echo "!{$numero} = {$valor}";
+echo "o fatorial de !{$numero} é: {$valor}";
 
 echo "<br>";
 
