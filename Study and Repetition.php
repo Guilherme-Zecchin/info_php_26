@@ -102,3 +102,17 @@ while ($contador <= 10) {
 }
 
 //Estudos de LOOPS - DO WHILE - 
+
+/**
+ * Exibir os numeros em ordem DECRESCENTE (Maior para Menor - DESC) de 10 -
+ *
+ * Dica: utilizar laçoes de repetição(loops) FOR e WHILE
+ *
+ * Saída esperada: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0.
+ */
+echo "<br>";
+
+for($i = 1; $i <= 10; $i++) {
+    echo $i . " ";
+}
+echo "<br>";

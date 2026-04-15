@@ -328,8 +328,7 @@ echo "<br>";
  * Saída esperada: O Total em segundos é: 9000.
  */
 
-
-
+echo "<br>";
 /**
  * Simular o funcionamento de uma calculadora com as duas estruturas lógicas:
  * Switch Case e IF ELSE IF ELSE. Não é necessário o ZERAR, somente o calculo.
@@ -338,8 +337,8 @@ echo "<br>";
  * Dica: utilizar 4 variáveis, uma delas vai ser $operador a outra $resultado.
  */
 
-$valor1 = 10;
-$operador = "*";
+$valor1 = 200;
+$operador = "/";
 $valor2 = 5;
 
 if ($operador == "+"){
@@ -361,8 +360,12 @@ echo "<br>";
  *
  * Saída esperada: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0.
  */
+echo "<br>";
 
-
+for ($i = 10; $i >= 1; $i--) {
+    echo $i . " ";
+}
+echo "<br>";
 
 /**
  * Calcular o fatorial de um numero qualquer.
@@ -374,7 +377,7 @@ echo "<br>";
  */
 echo "<br>";
 
-$numero = 12;
+$numero = 6;
 
 if ($numero > 0) {
     $valor = $numero;
@@ -386,6 +389,7 @@ echo "O fatorial de !{$numero} é : {$valor}";
 
 echo "<br>";
 
+
 /**
  * Com base no exercicio de:
  * Listar os 10 primeiros numeros pares com laçoes de repetição(loops) utilizando FOR e WHILE.
@@ -396,6 +400,7 @@ echo "<br>";
  *
  * Saída esperada: Os 5 primeiros Primos são: 3, 5, 7, 11, 13
  */
+echo "<br>";
 
 $contador = 0;
 
@@ -412,5 +417,6 @@ for($numero = 1; $contador < 10; $numero++) {
         $contador++;
     }
 }
+
 
 echo "<br>";
