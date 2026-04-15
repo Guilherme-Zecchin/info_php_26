@@ -3,17 +3,17 @@ echo "exercicios de fixação <br>";
 
 //1. Crie um algoritmo que receba um numero digitado pelo usuario e verifique se esse valor é positivo, negativo ou igual a zero. A saída deve ser: "Valor Positivo, "Valor Negativo" ou "Igual a zero".
 
-$valor = 78; // Valor de entrada
+$valor = -23; // Valor de entrada
 $resultado = ""; 
 
 if ($valor > 0) {
-    $resultado = "Valor Positivo";
+    $resultado = "Positivo";
 }elseif ($valor < 0) {
-    $resultado = "Valor Negativo";
+    $resultado = "Negativo";
 }else {
     $resultado = "Igual a Zero";
 }
-    echo $resultado ;
+    echo "O valor $valor é :$resultado <br>" ;
 
  echo "<br>";
 
@@ -33,7 +33,7 @@ for($contador = 0; $contador <= 10; $contador++){
 
 echo "<br>";
 
-$numero = 12;
+$numero = 17;
 
 if ($numero > 0) {
     $valor = $numero;
@@ -58,9 +58,11 @@ echo "<br>";
  * Dica: utilizar 4 variáveis, uma delas vai ser $operador a outra $resultado.
  */
 
-$valor1 = 10;
+echo "Calculadora <br>";
+
+$valor1 = 7;
 $operador = "*";
-$valor2 = 5;
+$valor2 = 3;
 
 if ($operador == "+"){
     echo $resultado = $valor1 + $valor2;

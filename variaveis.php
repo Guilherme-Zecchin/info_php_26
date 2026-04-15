@@ -311,8 +311,8 @@ echo "<br>";
  * Saída esperada: O IMC é: 123
  */
 
-$peso = 80;
-$altura = 1.75;
+$peso = 56;
+$altura = 1.61;
 
 $resultado = $peso / ($altura * $altura);
 
@@ -327,9 +327,9 @@ echo "<br>";
  *
  * Saída esperada: O Total em segundos é: 9000.
  */
-$dias = 1;
-$horas = 0;
-$minutos = 0;
+$dias = 3;
+$horas = 15;
+$minutos = 22;
 $segundos = 0; //Descobrir
 
 $diasEmHoras = $dias * 24;
@@ -378,7 +378,7 @@ echo "<br>";
  */
 echo "<br>";
 
-for ($i = 10; $i >= 1; $i--) {
+for ($i = 2; $i <= 10; $i++) {
     echo $i . " ";
 }
 echo "<br>";
