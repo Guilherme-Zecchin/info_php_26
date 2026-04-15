@@ -327,6 +327,22 @@ echo "<br>";
  *
  * Saída esperada: O Total em segundos é: 9000.
  */
+$dias = 1;
+$horas = 0;
+$minutos = 0;
+$segundos = 0; //Descobrir
+
+$diasEmHoras = $dias * 24;
+$diasEmMinutos = $diasEmHoras * 60;
+$diasEmSegundos = $diasEmMinutos * 60;
+$horasEmMinutos = $horas * 60;
+$horasEmSegundos = $horasEmMinutos * 60;
+//
+$minutosEmSegundos = $minutos * 60;
+
+$segundos = $diasEmSegundos + $horasEmSegundos + $minutosEmSegundos;
+
+echo "O total em segundos é: $segundos <br>";
 
 echo "<br>";
 /**
@@ -418,5 +434,8 @@ for($numero = 1; $contador < 10; $numero++) {
     }
 }
 
-
 echo "<br>";
+
+//Calcular o tempo de duração de um jogo, baseado em horario de inicio e horario de fim
+//Resultado deve ser sempre 90
+//Resolver o jogo que começar as 23hrs do dia 1 e vá até 00.30 do dia 2

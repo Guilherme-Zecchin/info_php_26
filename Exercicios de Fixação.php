@@ -73,3 +73,4 @@ if ($operador == "+"){
 } else echo "Operação Invalida"; 
 
 echo "<br>";
+
