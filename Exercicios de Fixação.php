@@ -76,3 +76,59 @@ if ($operador == "+"){
 
 echo "<br>";
 
+/**
+ * Calcular o fatorial de um numero qualquer.
+ * Ex.: calcular o fatorial de 5 (5!).
+ *
+ * Dica: 5 x 4 x 3 x 2 x 1. utilizar laçoes de repetição(loops) FOR e WHILE
+ *
+ * Saída esperada: o fatorial de 5 é: 120.
+ */
+echo "<br>";
+
+$numero = 6;
+
+if ($numero > 0) {
+    $valor = $numero;
+    for ($i = ($valor - 1); $i > 0; $i--) {
+        $valor = $valor * $i;
+    }
+}
+echo "O fatorial de !{$numero} é : {$valor}";
+
+echo "<br>";
+
+
+/**
+ * Com base no exercicio de:
+ * Listar os 10 primeiros numeros pares com laçoes de repetição(loops) utilizando FOR e WHILE.
+ *
+ * Encontrar os 5 primeiros numeros Primos.
+ *
+ * Dica: Utilizar calculo dos pares, sendo que o unico primo par é o 2.
+ *
+ * Saída esperada: Os 5 primeiros Primos são: 3, 5, 7, 11, 13
+ */
+echo "<br>";
+
+$contador = 0;
+
+for($numero = 1; $contador < 10; $numero++) {
+    $divisor = 2;
+
+    $resultado = $numero / $divisor; // 3 quociente
+    $resto = $numero % $divisor; // 1 resto
+
+    $ehPar =  $resto == 0; // true || false
+
+    if ($ehPar) {
+        echo "O numero $numero é par. <br>";
+        $contador++;
+    }
+}
+
+echo "<br>";
+
+//Calcular o tempo de duração de um jogo, baseado em horario de inicio e horario de fim
+//Resultado deve ser sempre 90
+//Resolver o jogo que começar as 23hrs do dia 1 e vá até 00.30 do dia 2
