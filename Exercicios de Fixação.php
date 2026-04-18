@@ -111,22 +111,6 @@ echo "<br>";
  */
 echo "<br>";
 
-$contador = 0;
-
-for($numero = 1; $contador < 10; $numero++) {
-    $divisor = 2;
-
-    $resultado = $numero / $divisor; // 3 quociente
-    $resto = $numero % $divisor; // 1 resto
-
-    $ehPar =  $resto == 0; // true || false
-
-    if ($ehPar) {
-        echo "O numero $numero é par. <br>";
-        $contador++;
-    }
-}
-
 echo "<br>";
 
 //Calcular o tempo de duração de um jogo, baseado em horario de inicio e horario de fim
