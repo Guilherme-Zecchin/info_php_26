@@ -94,7 +94,7 @@ if ($numero > 0) {
         $valor = $valor * $i;
     }
 }
-echo "O fatorial de !{$numero} é : {$valor}";
+echo "O fatorial de !{$numero} é : <b>{$valor}</b>";
 
 echo "<br>";
 
@@ -116,3 +116,27 @@ echo "<br>";
 //Calcular o tempo de duração de um jogo, baseado em horario de inicio e horario de fim
 //Resultado deve ser sempre 90
 //Resolver o jogo que começar as 23hrs do dia 1 e vá até 00.30 do dia 2
+
+echo "Duração de uma partida de futebol em minutos <br>";
+
+$horaInicio = "14:00";
+$horaFim = "16:00";
+
+$tempoJogo = strtotime($horaFim) - strtotime($horaInicio);
+$minutos = $tempoJogo / 60;
+
+echo "<b> O jogo durou $minutos minutos </b> <br>";
+
+echo "<br>";
+
+echo "Jogo começando em um dia e terminando em outro <br>";
+
+$inicio = new DateTime('2026-04-28 23:00:00');
+$fim = new DateTime('2026-04-29 00:30:00');
+$intervalo = $inicio->diff($fim);
+
+echo "Tempo de jogo: " . $intervalo->format('%H horas e %I minutos');
+echo "<br>";
+
+$totalMinutos = ($intervalo->days * 24 * 60) + ($intervalo->h * 60) + $intervalo->i;
+echo "\nTotal em minutos: " . $totalMinutos . " minutos.";

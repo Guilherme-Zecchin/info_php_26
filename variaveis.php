@@ -421,6 +421,3 @@ echo "<br>";
 
 echo "<br>";
 
-//Calcular o tempo de duração de um jogo, baseado em horario de inicio e horario de fim
-//Resultado deve ser sempre 90
-//Resolver o jogo que começar as 23hrs do dia 1 e vá até 00.30 do dia 2
