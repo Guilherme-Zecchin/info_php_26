@@ -283,7 +283,7 @@ echo "<br>";
 
 //Listar os 10 primeiros numeros pares com LOOP - Escolher FOR, WHILE OU DO-WHILE
 // 1, 3, 5, 7, 9, 11, 13, 15 ,17, 19
-echo "<br>10 primeiros numeros impares <br>";
+echo "<br>10 primeiros numeros impares </b><br>";
 
 $contador = 1;
 
@@ -378,30 +378,30 @@ echo "<br>";
  */
 echo "<br>";
 
-for ($i = 2; $i <= 10; $i++) {
+for($i = 20; $i >= 0; $i--) {
     echo $i . " ";
 }
 echo "<br>";
 
+
 /**
  * Calcular o fatorial de um numero qualquer.
  * Ex.: calcular o fatorial de 5 (5!).
- *
  * Dica: 5 x 4 x 3 x 2 x 1. utilizar laçoes de repetição(loops) FOR e WHILE
- *
  * Saída esperada: o fatorial de 5 é: 120.
  */
 echo "<br>";
 
-$numero = 6;
+$numero = 7;
 
 if ($numero > 0) {
     $valor = $numero;
-    for ($i = ($valor - 1); $i > 0; $i--) {
+    for ($i = $valor - 1; $i > 0; $i--) {
         $valor = $valor * $i;
     }
 }
 echo "O fatorial de !{$numero} é : {$valor}";
+//pegar formula no github do ariel
 
 echo "<br>";
 
@@ -409,11 +409,8 @@ echo "<br>";
 /**
  * Com base no exercicio de:
  * Listar os 10 primeiros numeros pares com laçoes de repetição(loops) utilizando FOR e WHILE.
- *
  * Encontrar os 5 primeiros numeros Primos.
- *
  * Dica: Utilizar calculo dos pares, sendo que o unico primo par é o 2.
- *
  * Saída esperada: Os 5 primeiros Primos são: 3, 5, 7, 11, 13
  */
 echo "<br>";
