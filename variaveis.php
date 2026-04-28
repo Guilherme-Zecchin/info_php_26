@@ -314,9 +314,9 @@ echo "<br>";
 $peso = 56;
 $altura = 1.61;
 
-$resultado = $peso / ($altura * $altura);
+$imc = $peso / ($altura * $altura);
 
-echo "O IMC é: $resultado <br>";
+echo "O IMC é: $imc <br>";
 
 echo "<br>";
 
@@ -419,5 +419,14 @@ echo "<br>";
 echo "<br>";
 
 
-echo "<br>";
+//Calcular o tempo de duração de um jogo, baseado em horario de inicio e horario de fim
+//Resultado deve ser sempre 90
+
+$horaInicio = "15:00";
+$horaFim = "17:00";
+
+$tempoJogo = strtotime($horaFim) - strtotime($horaInicio);
+$minutos = $tempoJogo / 60;
+
+echo "<b>O jogo durou $minutos minutos </b> <br>";
 
