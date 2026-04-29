@@ -415,6 +415,34 @@ echo "<br>";
  */
 echo "<br>";
 
+$limitePrimos = 5;
+$contadorPrimos = 0;
+$primos = "";
+
+for($numero = 3; $contadorPrimos < $limitePrimos; $numero++) {
+
+    $ehPrimo = true;
+    $antecessor = $numero - 1; // 6
+
+    for($divisor = 2; $divisor <= $antecessor; $divisor++) {
+    
+        $resto = $numero % $divisor;
+        $naoEhPrimo = $resto == 0;
+
+        if ($naoEhPrimo) {
+           $ehPrimo = false;
+           break;
+        }
+
+    }
+
+    if ($ehPrimo) {
+        $contadorPrimos++;
+        $primos .= "$numero, ";
+    }
+}
+
+ echo "<b>Os $limitePrimos primeiros Primos são:</b> $primos<br>";
 
 //Calcular o tempo de duração de um jogo, baseado em horario de inicio e horario de fim
 //Resultado deve ser sempre 90

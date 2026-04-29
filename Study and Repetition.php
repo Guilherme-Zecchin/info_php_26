@@ -117,4 +117,53 @@ for($i = 1; $i <= 10; $i++) {
 }
 echo "<br>";
 
+/**
+ * Com base no exercicio de:
+ * Listar os 10 primeiros numeros pares com laçoes de repetição(loops) utilizando FOR e WHILE.
+ * Encontrar os 5 primeiros numeros Primos.
+ * Dica: Utilizar calculo dos pares, sendo que o unico primo par é o 2.
+ * Saída esperada: Os 5 primeiros Primos são: 3, 5, 7, 11, 13
+ */
+echo "<br>";
 
+$limitePrimos = 5;
+$contadorPrimos = 0;
+$primos = "";
+
+for($numero = 3; $contadorPrimos < $limitePrimos; $numero++) {
+
+    $ehPrimo = true;
+    $antecessor = $numero - 1; // 6
+
+    for($divisor = 2; $divisor <= $antecessor; $divisor++) {
+    
+        $resto = $numero % $divisor;
+        $naoEhPrimo = $resto == 0;
+
+        if ($naoEhPrimo) {
+           $ehPrimo = false;
+           break;
+        }
+
+    }
+
+    if ($ehPrimo) {
+        $contadorPrimos++;
+        $primos .= "$numero, ";
+    }
+}
+
+ echo "Os $limitePrimos primeiros Primos são: $primos<br>";
+
+/**
+ * Calcular o tempo de duração de um jogo de futebol.
+ * Considerando que um jogo pode começar em um dia e terminar no outro.
+ * ex.: 23:30 - 01:00
+ * 
+ * Fase 1: Jogo vai ter exatos 90 minutos.
+ * Fase 2: Jogo pode ter acréscimos.
+ * 
+ * Dica; Converter tudo para uma mesma medida (segundos) para facilitar o calculo.
+ * 
+ * Saída esperada: O horario do término da partida é: 16:00:00.
+ */
