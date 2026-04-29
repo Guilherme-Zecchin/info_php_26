@@ -455,3 +455,33 @@ $minutos = $tempoJogo / 60;
 
 echo "<b>O jogo durou $minutos minutos </b> <br>";
 
+$acrescimos = 6;
+$tempoDeJogo = 90;
+
+// Fase 1:
+$horaInicio = "14:30:00"; // 16:00:00
+
+// Fase 2:
+// $horaInicio = "23:30:00"; // 01:00:00
+
+$tempoArray = explode(":", $horaInicio);
+$horas = $tempoArray[0]; // 14
+$minutos = $tempoArray[1]; // 30
+$segundos = $tempoArray[2]; // 00
+
+$horasEmMinutos = $horas * 60;
+$minutos += $horasEmMinutos + $tempoDeJogo + $acrescimos;
+
+$horas = (int) ($minutos / 60); // truncate e cast
+
+if ($horas >= 24) {
+    $horas -= 24;
+}
+
+$minutos = $minutos % 60;
+
+$horaFinal = str_pad($horas, 2, "0", STR_PAD_LEFT);
+$minutosFinal = str_pad($minutos, 2, "0", STR_PAD_LEFT);
+$horarioFinal = "$horaFinal:$minutosFinal:$segundos";
+
+echo "O horário do término da partida é: $horarioFinal<br>";
