@@ -179,3 +179,17 @@ echo "\nTotal em minutos: " . $totalMinutos . " minutos.";
  * 
  * Saída esperada: O horario do término da partida é: 16:00:00.
  */
+
+
+/**
+ * Somar dois vetores e exibir o resultado. - estudar e fazer novos testes
+ * Exemplo:
+ * $vetor1 = [1, 2, 3];
+ * $vetor2 = [4, 5, 6];
+ * Resultado: [5, 7, 9]
+ */
+
+$vetor1 = [1, 2, 3];
+$vetor2 = [4, 5, 6];
+$resultadoArray = $vetor1[0] + $vetor2[0];
+echo "Resultado: $resultadoArray <br>";
