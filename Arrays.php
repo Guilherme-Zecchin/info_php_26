@@ -7,10 +7,11 @@
 $numero = 10; // int
 $numero = 10.0; // float || double (decimal)
 
-$listaValores = array(); // array vazio
+$listaValores = array(); // array vazio  //Modo antigo, utilizado em phps mais velhos
 $listaValores = []; // array vazio
 
-$listaValores = [10, 20, 3, 50];
+$listaValores = array(10, 20, 30, 50); //Modo antigo
+$listaValores = [10, 20, 30, 50];
 //                0,  1, 2,  3
 
 $tam = count($listaValores); // 4
