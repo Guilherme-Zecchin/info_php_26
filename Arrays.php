@@ -35,11 +35,21 @@ for ($i = 0; $i < $tam; $i++) {
 
 $vetor1 = [1, 2, 3];
 $vetor2 = [4, 5, 6];
-$resultadoArray = [];
+$resultado = [];
 
 for ($i = 0; $i < count($vetor1); $i++) {
-    $resultadoArray[$i] = $vetor1[$i] + $vetor2[$i];
+    $valor1 = $vetor1[$i]; // 1
+    $valor2 = $vetor2[$i]; // 4
+
+    $soma = $valor1 + $valor2; // 1 + 4 = 5
+    
+    $resultado[$i] = $soma; // $resultado[$i] = 5
+
+    // $resultado[] = $vetor1[$i] + $vetor2[$i];
 }
-echo "Resultado Array = $resultadoArray <br>";
 
+$tamanhoArray = count($resultado);
 
+for ($i = 0; $i < $tamanhoArray; $i++) {
+    echo "Indice(i): $i - Valor: " . $resultado[$i] . "<br>";
+}
