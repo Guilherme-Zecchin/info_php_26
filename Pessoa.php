@@ -60,7 +60,7 @@ abstract class Pessoa {
 
     public function validarCPF($cpf) {
         // Extrai somente os números
-        $cpf = preg_replace( '/[^0-9]/is', '', $cpf );
+        $cpf = preg_replace( '/[^0-9]/is', '', $cpf ); // "3230560asdasd4" => 
         
         // Verifica se foi informado todos os digitos corretamente
         if (strlen($cpf) != 11) {
