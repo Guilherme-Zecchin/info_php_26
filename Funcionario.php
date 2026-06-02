@@ -1,5 +1,47 @@
 <?php
 
+class Funcionario {
+    private $nome;
+    private $sobrenome;
+    private $salario;
+    private $cargo;
+    private $setor;
+    private $cracha;
+
+    public function __construct($nome, $sobrenome, $salario, $cargo, $setor, $cracha) {
+        $this->nome = $nome;
+        $this->sobrenome = $sobrenome;
+        $this->salario = $salario;
+        $this->cargo = $cargo;
+        $this->setor = $setor;
+        $this->cracha = $cracha;
+    }
+
+    public function getNome() {
+        return $this->nome;
+    }
+
+    public function getSobrenome() {
+        return $this->sobrenome;
+    }
+
+    public function getSalario() {
+        return $this->salario;
+    }
+
+    public function getCargo() {
+        return $this->cargo;
+    }
+
+    public function getSetor() {
+        return $this->setor;
+    }
+
+    public function getCracha() {
+        return $this->cracha;
+    }
+}
+
 /**
  * Exercício: Criar um sistema que calcule o aumento de salário de um funcionário e os desconto do INSS e do IRPF,
  * considerando as seguintes regras:
@@ -31,8 +73,6 @@ function executar() {
             echo "\n";
             continue;
         }
-
-        // logica aqui
 
         $resposta = desejaContinuar();
 
@@ -101,8 +141,23 @@ function lerSalario() {
     return $salario;
 }
 
+function formatarSalario($salario) {
+    return number_format($salario, 2, ',', '.');
+}
+
+function calcularAumento($salario) {
+    if ($salario <= 1999) {
+        return $salario * 0.10;
+    } else {
+        return $salario * 0.03;
+    }
+}
+
 function calcularSalario($salario) {
-    // logica aqui
+    $aumento = calcularAumento($salario);
+    $salarioAtualizado = $salario + $aumento;
+    
+    echo "\nSalário atualizado com aumento: R$ " . formatarSalario($salarioAtualizado) . "\n";
 }
 
 function exibirAumento($salario) {
