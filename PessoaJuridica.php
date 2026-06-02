@@ -1,14 +1,14 @@
 <?php
 
 class PessoaJuridica extends Pessoa {
- private $cnpj;
+    private $cnpj;
 
     public function __construct($nome, $idade, $telefone, Endereco $endereco, $cnpj) {
         parent::__construct($nome, $idade, $telefone, $endereco);
         $this->cnpj = $cnpj;
 
-        if (!$this->validarCPF($cnpj)) {
-            throw new InvalidArgumentException("CPF inválido");
+        if (!$this->validarCNPJ($this->cnpj)) {
+            throw new InvalidArgumentException("CNPJ inválido");
         }
     }
 

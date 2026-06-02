@@ -1,6 +1,6 @@
 <?php
 
-    class PessoaFisica extends Pessoa {
+class PessoaFisica extends Pessoa {
     private $cpf;
 
     public function __construct($nome, $idade, $telefone, Endereco $endereco, $cpf) {
@@ -12,9 +12,9 @@
         }
     }
 
-public function validarCPF($cpf) {
+    public function validarCPF($cpf) {
         // Extrai somente os números
-        $cpf = preg_replace( '/[^0-9]/is', '', $cpf ); // "3230560asdasd4" => 
+        $cpf = preg_replace( '/[^0-9]/is', '', $cpf ); // "32ds23d32d3" => "322332323"
         
         // Verifica se foi informado todos os digitos corretamente
         if (strlen($cpf) != 11) {
@@ -41,5 +41,4 @@ public function validarCPF($cpf) {
 
         return true;
     }
-
 }
