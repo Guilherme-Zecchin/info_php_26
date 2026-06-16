@@ -47,3 +47,13 @@ right JOIN pessoa p ON ende.id = p.idEndereco;
 SELECT p.id as "idPessoa", p.nome as "nomePessoa", p.cpf, func.cargo, func.cracha, func.salario
 FROM funcionario func	
 INNER JOIN pessoa p ON func.idPessoa = p.id
+
+-- Tarefa:
+  --- Campos comuns de todas as tabelas: id(pk)(tinyint), criadoEm(TIMESTAMP/DATETIME), atualizadoEm(TIMESTAMP/DATETIME) 
+-- Criar tabela de estados
+-- Criar tabela de cidades
+  --- Dica: Site do IBGE para pegar todos Estados e Cidades
+-- Criar FKs dessas tabelas em endereco(tabela) com alter table 
+  --- Alterar os campos para idEstado e idCidade
+-- Criar tabela de usuarios
+-- Criar FK de pessoa na tabela usuario
