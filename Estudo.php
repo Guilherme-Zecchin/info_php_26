@@ -20,10 +20,14 @@
 //dbeaver - WHERE estado IN ("RS","SC","PR"); -> comando atua mostrando os dados da tabela onde endereços tenham na coluna "estado" os estados em parenteses
 //dbeaver - WHERE estado NOT IN ("RS","SC","PR"); -> comando atua ao contrario do IN, mostrando os endereços cadastrados EXCETO os dos estados em parenteses
 //dbeaver - ALTER TABLE é usado para a estrutura da tabela -> Exemplo: ALTER TABLE endereco DROP COLUMN estado; servindo para excluir a coluna especifica de estado ou outra desejada
-//dbeaver - 
-//dbeaver -
-//dbeaver -
-//dbeaver -
-//dbeaver -
-//dbeaver -
-//dbeaver -
+
+//MySQL - 
+//MySQL - 
+//MySQL - 
+//MySQL -  
+//MySQL - 
+//MySQL - 
+//MySQL - 
+//MySQL - 
+//MySQL - 
+//MySQL - 
