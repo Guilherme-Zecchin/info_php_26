@@ -42,3 +42,8 @@ left JOIN pessoa p ON ende.id = p.idEndereco;
 SELECT p.id as "idPessoa", p.nome as "nomePessoa", p.cpf, ende.estado, ende.cidade, ende.cep, ende.bairro, ende.rua, ende.numero
 FROM endereco ende
 right JOIN pessoa p ON ende.id = p.idEndereco;
+
+-- RELACAO PESSOA FUNCIONARIO
+SELECT p.id as "idPessoa", p.nome as "nomePessoa", p.cpf, func.cargo, func.cracha, func.salario
+FROM funcionario func	
+INNER JOIN pessoa p ON func.idPessoa = p.id
