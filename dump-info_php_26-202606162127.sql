@@ -16,6 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `Estado`
+--
+
+DROP TABLE IF EXISTS `Estado`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Estado` (
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(500) NOT NULL,
+  `Sigla` varchar(10) NOT NULL,
+  `capital` varchar(1000) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Estado`
+--
+
+LOCK TABLES `Estado` WRITE;
+/*!40000 ALTER TABLE `Estado` DISABLE KEYS */;
+INSERT INTO `Estado` VALUES (1,'Acre','AC','Rio Branco'),(2,'Alagoas','AL',''),(3,'Amapa','AP',''),(4,'Amazonas','AM',''),(5,'Bahia','BA',''),(6,'Ceara','CE',''),(7,'Espirito Santo','ES',''),(8,'Goias ','GO',''),(9,'Distrito Federal','DF','Distrito Federal'),(10,'Maranhao','MA',''),(11,'Mato Grosso','MT',''),(12,'Mato Grosso do Sul','MS',''),(13,'Minas Gerais','MG',''),(14,'Para','PA',''),(15,'Paraiba','PB',''),(16,'Parana','PR',''),(17,'Pernambuco','PE',''),(18,'Piaui','PI',''),(19,'Rio de Janeiro','RJ','Rio de Janeiro'),(20,'Rio Grande do Norte','RN',''),(21,'Rio Grande do Sul','RS','Porto Alegre'),(22,'Rondonia','RO',''),(23,'Roraima','RR',''),(24,'Santa Catarina','SC',''),(25,'São Paulo','SP','São Paulo'),(26,'Sergipe','SE',''),(27,'Tocantins','TO','');
+/*!40000 ALTER TABLE `Estado` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `endereco`
 --
 
@@ -117,4 +143,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-16 20:47:16
+-- Dump completed on 2026-06-16 21:27:04
