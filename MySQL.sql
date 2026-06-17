@@ -48,6 +48,10 @@ SELECT p.id as "idPessoa", p.nome as "nomePessoa", p.cpf, func.cargo, func.crach
 FROM funcionario func	
 INNER JOIN pessoa p ON func.idPessoa = p.id
 
+-- Deixa a data e hora automatica no insert e update
+ALTER TABLE info_php_26.estados MODIFY COLUMN criadoEm TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE info_php_26.estados MODIFY COLUMN atualizadoEm TIMESTAMP DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP;
+
 -- Tarefa:
   --- Campos comuns de todas as tabelas: id(pk)(tinyint), criadoEm(TIMESTAMP/DATETIME), atualizadoEm(TIMESTAMP/DATETIME) 
 -- Criar tabela de estados
