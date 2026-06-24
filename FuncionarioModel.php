@@ -1,6 +1,6 @@
 <?php
 
-<?php
+// CRUD - Create, Read, Update, Delete
 
 class FuncionarioModel {
     private $banco;
