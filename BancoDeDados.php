@@ -1,6 +1,6 @@
 <?php
 
-class BancoDados {
+class BancoDeDados {
 
     private $conexao;
     
