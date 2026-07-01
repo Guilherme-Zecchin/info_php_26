@@ -1,19 +1,13 @@
 <?php
 
-// CRUD - Create, Read, Update, Delete
+require_once "BaseModel.php";
 
-class FuncionarioModel {
-    private $banco;
-    private $tabela = "funcionario";
+class FuncionarioModel extends BaseModel {
 
     public function __construct(BancoDeDados $banco)
     {
-        $this->banco = $banco;
-    }
+        parent::__construct($banco);
 
-    public function listar()
-    {
-         $sql = "SELECT * FROM {$this->tabela}";
-         return $this->bacno->execQuery($sql, "Não foi possível obter os funcionarios.");
+        $this->tabela = "funcionario";
     }
 }
