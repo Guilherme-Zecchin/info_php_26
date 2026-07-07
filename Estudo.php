@@ -1,5 +1,11 @@
 <?php
 
+//Links para reforma tributaria Github
+// https://github.com/DeHor-Labs/mcp-fiscal-brasil
+// https://dehor-labs.github.io/mcp-fiscal-brasil/
+
+
+
 //Escrita PHP
 //Espaço para escrita de códigos/palavras/Variáveis para estudo e entender o que é
 
