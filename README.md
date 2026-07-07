@@ -1,3 +1,5 @@
+   sudo mysql -uroot -p
+   
    CREATE database info_php_26;
 
    SHOW DATABASES;
