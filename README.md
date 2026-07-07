@@ -1,4 +1,9 @@
-   sudo mysql -uroot -p
+GITHUB COMMANDS
+
+   git config --global user.name "nome"
+   git config --global user.email "email"
+      
+      sudo mysql -uroot -p
    
    CREATE database info_php_26;
 
