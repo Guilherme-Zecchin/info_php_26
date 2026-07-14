@@ -1,10 +1,47 @@
-GITHUB COMMANDS
+# info_php_26
 
-   git config --global user.name "nome"
-   git config --global user.email "email"
-      
-      sudo mysql -uroot -p
-   
+# Tutorial
+- Abrir vscode ver se ta logado ubuntu (canto inferior esquerdo), depois file open folder: seleciona tudo e apaga.
+
+- /var/www/html e da um ok. Após, terminal novo terminal.
+git clone LINK_GITHUB da um enter. Novamente, file open folder: seleciona tudo e apaga.
+
+- /var/www/html/curso_php_26 e da um ok. Após, terminal novo terminal verifica se esta em: /var/www/html/curso_php_26.
+
+# Configurar apache para aceitar rotas
+- Editar o arquivo
+`sudo vim /etc/apache2/sites-available/000-default.conf `
+
+- Adcionar o conteudo de directory
+
+```bash
+   <VirtualHost *:80>
+      ServerName localhost
+      ServerAlias localhost
+      DocumentRoot "/var/www/html"
+      <Directory "/var/www/html/">
+         Options +Indexes +Includes +FollowSymLinks +MultiViews
+         AllowOverride All
+         Require all granted
+      </Directory>
+   </VirtualHost>
+```
+
+- Sair com esc :wq!
+- Executar o comando: `a2enmod rewrite`
+- Parar e Iniciar o apache:
+   - `sudo service apache2 stop`
+   - `sudo service apache2 start`
+
+
+# MariaDB
+
+## Executar no terminal os comandos abaixo
+sudo service mariadb start
+
+sudo mysql -uroot -p
+
+```BASH
    CREATE database info_php_26;
 
    SHOW DATABASES;
@@ -14,10 +51,14 @@ GITHUB COMMANDS
    GRANT ALL PRIVILEGES ON *.* TO 'aluno'@localhost IDENTIFIED BY '1234';
 
    flush privileges;
-https://phoenixnap.com/kb/how-to-create-mariadb-user-grant-privileges#:~:text=To%20create%20a%20new%20MariaDB, to%20a%20local%20MySQL%20server.
+```
+
+https://phoenixnap.com/kb/how-to-create-mariadb-user-grant-privileges#:~:text=To%20create%20a%20new%20MariaDB,
+to%20a%20local%20MySQL%20server.
 
 set session sql_mode = 'No_engine_substitution';
 
+```SQL
 -- Retornar se o filtro for atendido
 select u.* from usuario as u
 inner join pessoa_fisica as pf 
@@ -82,3 +123,4 @@ ALTER TABLE info_php_26.cidades ADD atualizadoEm TIMESTAMP DEFAULT NULL ON UPDAT
    -- alterar os campos para idEstado e idCidade
 -- Criar tabela de usuarios
 -- Criar FK de pessoa na tabela usuario
+```
