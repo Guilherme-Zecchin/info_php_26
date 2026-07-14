@@ -28,7 +28,7 @@ git clone LINK_GITHUB da um enter. Novamente, file open folder: seleciona tudo e
 ```
 
 - Sair com esc :wq!
-- Executar o comando: `a2enmod rewrite`
+- Executar o comando: `sudo a2enmod rewrite`
 - Parar e Iniciar o apache:
    - `sudo service apache2 stop`
    - `sudo service apache2 start`
