@@ -20,6 +20,7 @@ class BancoDeDados {
 
         $isCreate = str_contains($sql, "INSERT");
         $isUpdate = str_contains($sql, "UPDATE");
+        $isDelete = str_contains($sql, "DELETE");
 
         $result = $this->conexao->query($sql);
         

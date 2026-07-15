@@ -79,7 +79,11 @@ class FuncionarioController
         $action = "/info_php_26/funcionarios";
         $funcionarioFormulario = new FuncionarioEntity();
 
-        require __DIR__ . "/form-funcionario.php";
+        $rotaRaiz = dirname(__DIR__, 2);
+
+        require $rotaRaiz . "/src/views/form-funcionario.php";
+
+        require __DIR__ . "./src/views/form-funcionario.php";
     }
 
     public function criar(): void
@@ -134,6 +138,8 @@ class FuncionarioController
     {
         try {
             $this->funcionarioModel->excluir((int) $id);
+
+            $_SESSION["flash"]["sucesso"] = "Usuário foi excluído";
 
             $this->redirecionarParaFuncionarios();
         } catch (Exception $erro) {
