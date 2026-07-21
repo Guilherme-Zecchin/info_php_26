@@ -4,6 +4,8 @@
 // https://github.com/DeHor-Labs/mcp-fiscal-brasil
 // https://dehor-labs.github.io/mcp-fiscal-brasil/
 
+//CRUD - Create, Read, Update, Delete
+
 
 
 //Escrita PHP
