@@ -10,9 +10,13 @@ git clone LINK_GITHUB da um enter. Novamente, file open folder: seleciona tudo e
 
 # Configurar apache para aceitar rotas
 - Editar o arquivo
-`sudo vim /etc/apache2/sites-available/000-default.conf `
+```bash
+sudo vim /etc/apache2/sites-available/000-default.conf
+```
 
-- Adcionar o conteudo de directory
+- Para editar pressionar a tecla insert
+
+- Adcionar o conteudo de directory(abaixo): <Directory "/var/www/html/">...</Directory>
 
 ```bash
    <VirtualHost *:80>
@@ -27,11 +31,19 @@ git clone LINK_GITHUB da um enter. Novamente, file open folder: seleciona tudo e
    </VirtualHost>
 ```
 
-- Sair com esc :wq!
-- Executar o comando: `sudo a2enmod rewrite`
+- Para sair do editor VIM pressionar `ESC` seguido de `:wq!`
+- Executar o comando:
+```bash
+   sudo a2enmod rewrite
+```
+
 - Parar e Iniciar o apache:
-   - `sudo service apache2 stop`
-   - `sudo service apache2 start`
+   - ```bash
+         sudo service apache2 stop
+      ```
+   - ```bash
+         sudo service apache2 start
+      ```
 
 
 # MariaDB
@@ -61,20 +73,20 @@ set session sql_mode = 'No_engine_substitution';
 ```SQL
 -- Retornar se o filtro for atendido
 select u.* from usuario as u
-inner join pessoa_fisica as pf 
+inner join pessoa_fisica as pf
 ON u.id = pf.usuario_alteracao;
 
 -- Retornar tudo(usuario + Pessoa_fisica) se encontrar
 -- senao retorna os dados de usuario
 select u.* from usuario as u
-left join pessoa_fisica as pf 
+left join pessoa_fisica as pf
 ON u.id = pf.usuario_alteracao;
 
 
 -- Retornar tudo(Pessoa_fisica + usuario) se encontrar
 -- senao retorna os dados da Pessoa_fisica
 select u.* from usuario as u
-right join pessoa_fisica as pf 
+right join pessoa_fisica as pf
 ON u.id = pf.usuario_alteracao;
 
 
@@ -99,7 +111,7 @@ FROM endereco ende
 right JOIN pessoa p ON ende.id = p.idEndereco;
 
 SELECT p.id as "idPessoa", p.nome as "nomePessoa", p.cpf, func.cargo, func.cracha, func.salario
-FROM funcionario func 
+FROM funcionario func
 INNER JOIN pessoa p ON func.idPessoa = p.id;
 
 -- Adicionar campos e deixar a data e hora automatica no insert e update
@@ -123,82 +135,4 @@ ALTER TABLE info_php_26.cidades ADD atualizadoEm TIMESTAMP DEFAULT NULL ON UPDAT
    -- alterar os campos para idEstado e idCidade
 -- Criar tabela de usuarios
 -- Criar FK de pessoa na tabela usuario
-```
-
-# Atualização para o mini-framework
-
-## 1. Estrutura final
-
-```txt
-info_php_26/
-├── index.php
-├── .htaccess
-├── database.sql
-└── src/
-    ├── kernel/
-    │   ├── bootstrap.php
-    │   ├── autoload.php
-    │   ├── helpers.php
-    │   ├── Router.php
-    │   └── BaseController.php
-    ├── database/
-    │   ├── BancoDeDados.php
-    │   └── BaseModel.php
-    ├── config/
-    │   ├── app.php
-    │   ├── conexao.php
-    │   └── rotas.php
-    ├── controllers/
-    │   └── funcionario/
-    │       └── FuncionarioController.php
-    ├── entities/
-    │   └── funcionario/
-    │       └── FuncionarioEntity.php
-    ├── models/
-    │   └── funcionario/
-    │       └── FuncionarioModel.php
-    └── views/
-        └── funcionario/
-            ├── listar.php
-            └── form.php
-```
-
-## 2. Configuração de URL
-
-Se acessar pelo navegador assim:
-
-```txt
-http://localhost/info_php_26
-```
-
-mantenha em `src/config/app.php`:
-
-```php
-define("BASE_URL", "/info_php_26");
-```
-
-Se acessar direto por:
-
-```txt
-http://localhost
-```
-
-use:
-
-```php
-define("BASE_URL", "");
-```
-
-## 3. Banco de dados
-
-Execute o arquivo `database.sql` no MariaDB/MySQL.
-
-## 4. Teste
-
-Acesse:
-
-```txt
-http://localhost/info_php_26/
-http://localhost/info_php_26/funcionarios
-http://localhost/info_php_26/funcionarios/novo
 ```
